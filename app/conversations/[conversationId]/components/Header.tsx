@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
   const otherUser = useOtheruser(conversation);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { members } = useActiveList();
-  let oU = otherUser?.email || "";
+  const oU = otherUser?.email || "";
   const isActive = members.indexOf(oU) !== -1;
   const statusText = useMemo(() => {
     if (conversation.isGroup) {
