@@ -11,4 +11,4 @@ export const config = {
         '/users/:path*',
         '/conversations/:path*',
     ]
-}
+} 
