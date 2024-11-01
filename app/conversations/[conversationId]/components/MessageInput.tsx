@@ -19,6 +19,7 @@ const MessageInput:React.FC<MessageInputProps> = ({
     register,
     errors
 }) => {
+  errors
   return (  
     <div className="relative w-full">
       <input 

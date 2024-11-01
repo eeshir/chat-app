@@ -20,6 +20,7 @@ const getCurrentUser = async() => {
     }
     catch(e:any){
         return null;    
+        console.error(e);
     }
 }
 

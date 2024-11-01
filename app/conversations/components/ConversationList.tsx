@@ -10,7 +10,7 @@ import GroupChatModel from "./GroupChatModel";
 import { User } from "@prisma/client";
 import { useSession } from "next-auth/react";
 import { pusherClient } from "@/app/libs/pusher";
-import { find, update } from "lodash";
+import { find } from "lodash";
 
 interface ConversationListProps {
   initialItems: FullConversationType[];

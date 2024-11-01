@@ -43,7 +43,7 @@ export async function DELETE(request: Request, { params }: { params: IParams }) 
             }
         })
 
-        return NextResponse.json('Deleted', { status: 200 });
+        return NextResponse.json(deletedConversation);
     }
     catch (error: any) {
         console.log(error, 'Error_conversation_delete');

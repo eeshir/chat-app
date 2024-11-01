@@ -25,8 +25,8 @@ export async function POST(req: Request) {
         return NextResponse.json(user);
     }
     catch (e:any) {
-        // console.log(e,'Registeration error');
         return new NextResponse('Internal Error', { status: 500 });
+        console.log(e,'Registeration error');
     }
         
 }

@@ -32,8 +32,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 }) => {
   const otherUser = useOtheruser(data);
   const [confirmOpen, setConfirmOpen] = useState(false);
+  
   const {members} = useActiveList();
-  const isActive = members.indexOf(otherUser?.email!) != -1;
+  const isActive = members.indexOf(otherUser?.email!) !== -1;
+
   const joinedDate = useMemo(() => {
     return format(new Date(otherUser.createdAt), "PP");
   }, [otherUser.createdAt]);
@@ -48,7 +50,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     }
 
     return isActive ? "Active" : "Offline";
-  }, [data]);
+  }, [data,isActive]);
 
   return (
     <>
